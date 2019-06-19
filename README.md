@@ -1,7 +1,7 @@
 # js_overload
 Data Visualization Dashboard
 
-### To test run the app, enter the following commands in your terminal:
+### To test run the app in local machine, enter the following commands in your terminal:
 
 ```
 $ git clone https://github.com/bellissima0419/js_overload
