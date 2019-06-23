@@ -25,6 +25,9 @@ Base = automap_base()
 # reflect the tables
 Base.prepare(db.engine, reflect=True)
 
+Survey_2019 = Base.classes.survey_2019
+
+
 # Save references to each table
 # @TODO create variables to hold the table names
 
@@ -32,6 +35,21 @@ Base.prepare(db.engine, reflect=True)
 def index():
     """Return the homepage."""
     return render_template("index.html")
+
+
+@app.route("/names")
+def names():
+    """Return a list of sample names."""
+
+    # Use Pandas to perform the sql query
+    stmt = db.session.query(Samples).statement
+    df = pd.read_sql_query(stmt, db.session.bind)
+
+    # Return a list of the column names (sample names)
+    return jsonify(list(df.columns)[2:][:200])
+
+    
+
 
 if __name__ == "__main__":
     app.run()
