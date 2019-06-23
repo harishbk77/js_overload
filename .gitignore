@@ -1,9 +1,9 @@
 # Byte-compiled / optimized / DLL files
 # developer_survey_2019
 developer_survey_2019/
-# dash_app/db/js_overload.sqlite
+dash_app/db/js_overload.sqlite
 
-dataProcessing.ipynb
+dataProcessing-Copy1.ipynb
 dash_app/Untitled.ipynb
 __pycache__/
 *.py[cod]
