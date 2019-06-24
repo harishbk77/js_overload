@@ -83,6 +83,5 @@ CREATE TABLE "jso11k" (
   `Ethnicity` text,
   `Dependents` text,
   `SurveyLength` text,
-  `SurveyEase` text,
-  PRIMARY KEY (`Respondent`)
+  `SurveyEase` text
 )
