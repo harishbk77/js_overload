@@ -49,7 +49,7 @@ def names():
     cur = conn.cursor()
     cols = '''
         SELECT name, sql FROM sqlite_master
-        WHERE type='table' AND name = 'jso11k'
+        WHERE type='table' AND name = 'jso11'
     '''
 
     cur.execute(cols)
@@ -79,7 +79,7 @@ def countries():
     cur = conn.cursor()
 
     query_string = '''
-        SELECT Country, count(country) FROM jso11k
+        SELECT Country, count(country) FROM jso11
         GROUP BY Country
         ORDER BY COUNT(Country) DESC
     '''
