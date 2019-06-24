@@ -47,14 +47,17 @@ def names():
 
     conn = sqlite3.connect("dash_app/db/js_overload.sqlite")
     cur = conn.cursor()
-    cols = '''SELECT sql FROM sqlite_master
-    WHERE tbl_name = `jso11k` AND type = `table`'''
+    cols = '''
+        SELECT name, sql FROM sqlite_master
+        WHERE type='table' AND name = 'jso11k'
+    '''
 
     cur.execute(cols)
     rows = cur.fetchall()
     col_string = rows[0][1]
     pattern = r'`([A-Za-z0-9]*)`'
     column_names = re.findall(pattern, col_string)[:-1]
+
     return jsonify(column_names)
 
     # column names using sqlalchemy:
