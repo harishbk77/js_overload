@@ -1,4 +1,4 @@
-CREATE TABLE `jso300` (
+CREATE TABLE "jso11k" (
   `Respondent` int(11) NOT NULL,
   `MainBranch` text,
   `Hobbyist` text,
@@ -85,5 +85,4 @@ CREATE TABLE `jso300` (
   `SurveyLength` text,
   `SurveyEase` text,
   PRIMARY KEY (`Respondent`)
-) 
--- ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci //from mysql export
+)
