@@ -26,7 +26,7 @@ Base = automap_base()
 # reflect the tables
 Base.prepare(db.engine, reflect=True)
 
-Survey = Base.classes.jso
+Survey = Base.classes.jso11k
 
 
 # Save references to each table
@@ -41,7 +41,7 @@ def index():
 
 @app.route("/columns")
 def names():
-    """Return a list of columns from 300 rows from the original dataset."""
+    """Return a list of columns from 11000 rows from the original dataset."""
 
     # Use Pandas to perform the sql query
     stmt = db.session.query(Survey).statement
