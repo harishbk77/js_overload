@@ -30,7 +30,7 @@ Survey = Base.classes.jso
 
 
 # Save references to each table
-# @TODO create variables to hold the table names
+# @TODO create variables to hold the table ashshnames
 
 @app.route("/")
 def index():
